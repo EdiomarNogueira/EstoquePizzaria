@@ -1,0 +1,675 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    background-repeat: repeat;
+    background-image: url("../images/background/background.png");
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+.area_pizzaria {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.area_trabalho {
+    box-shadow: inset 0 0 2px rgb(0, 0, 0), 0 0 4px rgb(54, 54, 54);
+    border-radius: 20px 20px 0px 0px;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.navbar {
+    position: relative;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    /*Centralizando os itens da navbar*/
+    justify-items: center;
+    /*background-color: #ffffff;*/
+    width: 90%;
+    height: 65px;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+
+/*
+*
+*
+*
+*/
+
+
+/*MENU SUPERIOR*/
+
+.menu-superior {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.menu-superior>li>a {
+    font-variant: small-caps;
+    font-size: 20px;
+    color: #414141;
+    display: flex;
+    height: 60px;
+    width: 140px;
+    text-decoration: none;
+    margin-left: 20px;
+    border-radius: 16px 16px 0px 0px;
+    background-color: #e2e1e1;
+    border-right: 6px solid #E4746C;
+    border-top: 3px solid #E4746C;
+    justify-content: center;
+    transition-duration: 0.4s;
+}
+
+.selected {
+    background-color: #D9B54C;
+    border-radius: 0;
+}
+
+.menu-superior li a:hover {
+    border-radius: 10;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #E4746C;
+    border-right: 6px solid #e2e1e1;
+    border-top: 3px solid #e2e1e1;
+    transition-duration: 0.4s;
+}
+
+.horario {
+    height: 40px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    bottom: -20px;
+    position: relative;
+    font-weight: bolder;
+    margin-left: 80px;
+    background-color: rgba(255, 0, 0, 0.400);
+    border: 2px solid #E4746C;
+    color: white;
+    border-radius: 8px 8px 0px 0px;
+}
+
+
+/*MENU SUPERIOR*/
+
+.menu-superior li ul {
+    display: flex;
+    list-style: none;
+}
+
+.btn_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+
+/*FIM MENU SUPERIOR*/
+
+
+/*Menu Superior - dropdown responsivo*/
+
+.menu-superior>li>ul>li>a {
+    position: relative;
+    z-index: 2;
+    font-variant: small-caps;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #9b9b9b;
+    border: 2px solid #616161;
+    transition: 0.1s;
+    min-width: 130px;
+}
+
+.menu-superior li ul {
+    position: absolute;
+    visibility: hidden;
+}
+
+.menu-superior li:hover a {
+    visibility: visible;
+}
+
+
+/*FIM LOGO CENTRAL*/
+
+.area_formulario {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    background-color: #fff2e7;
+    border-radius: 6px;
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.area_botoes {
+    height: 50vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.area_inputs {
+    width: 70%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.titulo_operacao {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+.personalizacao_btn {
+    width: 250px;
+    height: 60px;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    background-color: #c4c4c4;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 6px #999;
+    margin-top: 10px;
+    font-size: large;
+    font-weight: 600;
+    color: rgb(85, 85, 85);
+    padding: 20px;
+}
+
+.salvar {
+    margin-right: 40px;
+    margin-top: 20px;
+    background-color: rgb(151, 224, 77)!important;
+    color: white;
+}
+
+.salvar:hover {
+    background-color: rgb(131, 184, 78) !important;
+}
+
+.salvar:active {
+    background-color: rgb(86, 124, 47) !important;
+}
+
+.cancelar {
+    margin-right: 40px;
+    margin-top: 20px;
+    background-color: #E4746C!important;
+    color: white;
+}
+
+.cancelar:hover {
+    background-color: #c45d55 !important;
+}
+
+.cancelar:active {
+    background-color: #914842 !important;
+}
+
+.personalizacao_btn {
+    width: 250px;
+    height: 60px;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    background-color: #c4c4c4;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 6px #999;
+    margin-top: 10px;
+    font-size: large;
+    font-weight: 600;
+    color: rgb(85, 85, 85);
+    padding: 20px;
+}
+
+.personalizacao_btn:hover {
+    color: white;
+}
+
+.personalizacao_btn:hover {
+    background-color: #dad622;
+    transition: 0.5s;
+}
+
+.personalizacao_btn:active {
+    background-color: #9e9c0c;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.personalizacao_btn>a {
+    width: 250px;
+    height: 60px;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    background-color: #c4c4c4;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 6px #999;
+    margin-top: 10px;
+    font-size: large;
+    font-weight: 600;
+    color: rgb(85, 85, 85);
+    padding: 20px;
+}
+
+.personalizacao_btn>a:hover {
+    color: white;
+}
+
+.personalizacao_btn>a:hover {
+    background-color: #dad622;
+    transition: 0.5s;
+}
+
+.personalizacao_btn>a:active {
+    background-color: #9e9c0c;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.logo_pizzaria {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 40%;
+}
+
+.btn_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    background-color: rgb(175, 175, 175);
+    border: 2px solid rgb(196, 77, 22);
+    border-radius: 6px;
+    font-size: x-large;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(73, 73, 73);
+    float: right;
+    width: 140px;
+    height: 40px;
+    margin: 40px 140px 0px 0px;
+    position: fixed;
+    left: 90%;
+    top: 30px;
+}
+
+.btn_login:hover {
+    background-color: white;
+}
+
+.ocultar {
+    display: none;
+}
+
+.titulo_operacao {
+    color: #E4746C;
+}
+
+#lista_inicial_area {
+    margin: 10px auto;
+}
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+.form_float {
+    position: relative;
+    padding-top: 13px;
+}
+
+.form_float input {
+    border: 0;
+    outline: none;
+    min-width: 180px;
+    font-size: 20px;
+    height: 40px;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -webkit-appearance: none;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 2px solid lightgrey;
+}
+
+.form_float input:focus {
+    border-bottom: 2px solid #E4746C;
+}
+
+.form_float input::placeholder {
+    color: transparent;
+}
+
+.form_float label {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 24px;
+    margin-left: 10px;
+    color: rgb(58, 58, 58);
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+}
+
+.form_float input:required:invalid+label {
+    color: red;
+}
+
+.form_float input:focus:required:invalid {
+    border-bottom: 2px solid red;
+}
+
+.form_float input:required:invalid+label:before {
+    content: '*';
+}
+
+.form_float input:focus+label,
+.form_float input:not(:placeholder-shown)+label {
+    font-size: 13px;
+    margin-top: -2px;
+    color: #E4746C;
+}
+
+.form_imagem>input,
+.form_imagem>h3,
+.form_imagem>label,
+.form_option {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.input_pequeno {
+    width: 80px;
+    height: 40px;
+}
+
+.input_medio {
+    width: 180px;
+    height: 40px;
+    border-radius: 6px;
+    border: 2px solid lightgrey;
+    color: rgb(58, 58, 58);
+    font-size: 16px;
+}
+
+.input_grande {
+    width: 400px;
+    height: 40px;
+}
+
+select {
+    height: 40px;
+    margin-left: 10px;
+}
+
+.area_btn {
+    margin-top: 40px;
+}
+
+.alert-sucess {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 380px;
+    height: 60px;
+    background-color: rgb(151, 224, 77);
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 20px auto;
+    border-radius: 6px;
+}
+
+.alert-danger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 380px;
+    height: 60px;
+    background-color: #E4746C;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 20px auto;
+    align-items: center;
+    border-radius: 6px;
+    z-index: 1000;
+    position: relative;
+}
+
+.titulo_sessao {
+    color: #E4746C;
+    text-align: center;
+}
+
+.btn_acoes {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.elemento_lista {
+    margin-top: 40px;
+}
+
+.colunas_lista_produtos>th {
+    border: 2px solid #E4746C;
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin: 0px;
+}
+
+.img_acao {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #e4746c70;
+    background-color: white;
+    padding: 2px;
+    border-radius: 6px;
+}
+
+.background {
+    background-color: #ffdbc2;
+}
+
+.area_lista_produtos {
+    margin: 20px auto;
+}
+
+.area_paginacao {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    border: 2px solid rgb(156, 153, 153);
+    overflow: hidden;
+}
+
+.paginacao {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.paginacao>.page-item {
+    margin: 2px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.page-item>a {
+    padding: 10px;
+    background-color: white;
+    text-decoration: none;
+    border: 2px solid #E4746C;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+
+.page-item>a:hover {
+    background-color: #E4746C;
+    transition: 0.5s;
+}
+
+.pg_atual {
+    background-color: rgb(151, 224, 77)!important;
+}
+
+.pg_atual:hover {
+    background-color: rgb(83, 131, 35)!important;
+}
+
+.elemento_vizualizacao {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.elemento_vizualizacao>h1 {
+    color: #E4746C;
+}
+
+.elemento_vizualizacao>h4 {
+    margin-right: 10px;
+}
+
+.pesquisar_lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.visualizarEntrada,
+.visualizarSaida {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #E4746C;
+    border-radius: 6px;
+    padding: 20px;
+    background-color: #e6b8b4;
+}
+
+.vProduto {
+    padding: 10px;
+    border: 2px solid #E4746C;
+    background-color: rgb(228, 228, 228);
+    border-radius: 6px;
+    margin: 5px;
+}
+
+.valor_minimo {
+    color: red;
+    font-size: large;
+    font-weight: 600;
+}

@@ -1,0 +1,14 @@
+{
+    "description": "Projeto PIzzaria",
+    "authors": [{
+        "name": "Ediomar Nogueira,Elizeu Amorim,Robson",
+        "email": "ediomar_ti@hotmail.com"
+    }],
+    "autoload": {
+        "psr-4": {
+            "Sts\\": "app/sts",
+            "Core\\": "core"
+        }
+    },
+    "require": {}
+}
